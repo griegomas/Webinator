@@ -49,15 +49,19 @@ class App extends Component {
                 <tr>
                   <th>Description</th>
                   <th>Title</th>
-                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
                 </tr>
               </thead>
               <tbody>
                 {this.state.Webinars.map(Webinars =>
                   <tr>
-                    <td><Link to={`/show/${Webinars.url}`}>{Webinars.url}</Link></td>
+                    <td><a target="_blank" href={Webinars.url}>Registration link</a></td>
                     <td>{Webinars.subject}</td>
                     <td>{Webinars.description}</td>
+                    <td>{Webinars.starttime}</td>
+                    <td>{Webinars.endtime}</td>
                   </tr>
                 )}
               </tbody>
